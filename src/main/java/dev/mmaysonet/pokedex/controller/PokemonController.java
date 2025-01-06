@@ -30,7 +30,7 @@ public class PokemonController {
     public Mono<ResponseEntity<PokemonResponse>> getPokemonByName(@RequestParam String name) {
         // TODO: Implement this method
         return Mono.just(
-            ResponseEntity.ok(new PokemonResponse(null, name))
+            ResponseEntity.ok(new PokemonResponse(null, name, null))
         );
     }
 }
