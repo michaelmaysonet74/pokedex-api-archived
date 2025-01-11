@@ -1,6 +1,5 @@
 package dev.mmaysonet.pokedex.entity;
 
-import dev.mmaysonet.pokedex.model.Ability;
 import java.util.List;
 import lombok.NonNull;
 import org.springframework.data.annotation.Id;
@@ -11,9 +10,11 @@ public record PokemonEntity(
     @Id String _id,
     @NonNull Integer id,
     @NonNull String name,
-    List<Ability> abilities,
+    List<AbilityEntity> abilities,
     BaseStatsEntity baseStats,
     String category,
+    String entry,
+    EvolutionChainEntity evolution,
     Integer generation,
     MeasurementEntity measurement,
     String sprite,

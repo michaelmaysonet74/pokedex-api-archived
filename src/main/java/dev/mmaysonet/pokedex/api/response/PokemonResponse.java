@@ -14,6 +14,8 @@ public record PokemonResponse(
     List<Ability> abilities,
     BaseStatsEntity baseStats,
     String category,
+    String entry,
+    EvolutionChainResponse evolution,
     Integer generation,
     MeasurementEntity measurement,
     String sprite,

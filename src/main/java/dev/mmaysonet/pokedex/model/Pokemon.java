@@ -13,6 +13,8 @@ public record Pokemon(
     List<Ability> abilities,
     BaseStatsEntity baseStats,
     String category,
+    String entry,
+    EvolutionChain evolution,
     Integer generation,
     MeasurementEntity measurement,
     String sprite,
