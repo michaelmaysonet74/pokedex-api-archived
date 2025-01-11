@@ -13,24 +13,30 @@ import reactor.core.publisher.Mono;
 @RequiredArgsConstructor
 public class PokemonController {
 
-    private final PokemonService pokemonService;
-    private final PokemonMapper pokemonMapper;
+  private final PokemonService pokemonService;
+  private final PokemonMapper pokemonMapper;
 
-    @GetMapping("/{id}")
-    public Mono<ResponseEntity<PokemonResponse>> getPokemonById(@PathVariable Integer id) {
-        return pokemonService.getPokemonById(id).map(maybePokemon ->
-            maybePokemon
-                .map(pokemonMapper::toPokemonResponse)
-                .map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build())
-        );
-    }
+  @GetMapping("/{id}")
+  public Mono<ResponseEntity<PokemonResponse>> getPokemonById(@PathVariable Integer id) {
+    return pokemonService
+        .getPokemonById(id)
+        .map(
+            maybePokemon ->
+                maybePokemon
+                    .map(pokemonMapper::toPokemonResponse)
+                    .map(ResponseEntity::ok)
+                    .orElse(ResponseEntity.notFound().build()));
+  }
 
-    @GetMapping()
-    public Mono<ResponseEntity<PokemonResponse>> getPokemonByName(@RequestParam String name) {
-        // TODO: Implement this method
-        return Mono.just(
-            ResponseEntity.ok(new PokemonResponse(null, name, null))
-        );
-    }
+  @GetMapping()
+  public Mono<ResponseEntity<PokemonResponse>> getPokemonByName(@RequestParam String name) {
+    return pokemonService
+        .getPokemonByName(name)
+        .map(
+            maybePokemon ->
+                maybePokemon
+                    .map(pokemonMapper::toPokemonResponse)
+                    .map(ResponseEntity::ok)
+                    .orElse(ResponseEntity.notFound().build()));
+  }
 }

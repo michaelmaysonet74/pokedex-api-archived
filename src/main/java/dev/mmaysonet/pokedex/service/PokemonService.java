@@ -1,12 +1,13 @@
 package dev.mmaysonet.pokedex.service;
 
 import dev.mmaysonet.pokedex.model.Pokemon;
+import java.util.Optional;
 import lombok.NonNull;
 import reactor.core.publisher.Mono;
 
-import java.util.Optional;
-
 public interface PokemonService {
 
-    Mono<Optional<Pokemon>> getPokemonById(@NonNull Integer id);
+  Mono<Optional<Pokemon>> getPokemonById(@NonNull Integer id);
+
+  Mono<Optional<Pokemon>> getPokemonByName(@NonNull String name);
 }

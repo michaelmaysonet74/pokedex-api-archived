@@ -2,6 +2,7 @@ plugins {
     java
     id("org.springframework.boot") version "3.4.1"
     id("io.spring.dependency-management") version "1.1.7"
+    id("com.diffplug.spotless") version "7.0.1"
 }
 
 group = "dev.mmaysonet"
@@ -39,6 +40,20 @@ dependencies {
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
-tasks.withType<Test> {
-    useJUnitPlatform()
+spotless {
+    java {
+        target("src/**/*.java")
+        googleJavaFormat()
+    }
+}
+
+tasks {
+    spotlessCheck {
+        mustRunAfter(compileJava)
+        mustRunAfter(compileTestJava)
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }

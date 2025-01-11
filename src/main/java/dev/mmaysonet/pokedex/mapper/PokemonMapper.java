@@ -8,7 +8,7 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface PokemonMapper {
 
-    Pokemon toPokemon(PokemonEntity pokemonEntity);
+  Pokemon toPokemon(PokemonEntity pokemonEntity);
 
-    PokemonResponse toPokemonResponse(Pokemon pokemon);
+  PokemonResponse toPokemonResponse(Pokemon pokemon);
 }
