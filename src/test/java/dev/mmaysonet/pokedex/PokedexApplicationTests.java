@@ -1,12 +1,11 @@
-package dev.mmaysonet.poke_dex;
+package dev.mmaysonet.pokedex;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ApplicationTests {
+class PokedexApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+  @Test
+  void contextLoads() {}
 }
