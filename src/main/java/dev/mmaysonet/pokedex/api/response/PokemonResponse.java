@@ -1,9 +1,8 @@
 package dev.mmaysonet.pokedex.api.response;
 
+import java.util.List;
 import lombok.Builder;
 import lombok.NonNull;
-
-import java.util.List;
 
 @Builder(toBuilder = true)
 public record PokemonResponse(
@@ -18,5 +17,4 @@ public record PokemonResponse(
     MeasurementResponse measurement,
     String sprite,
     List<String> types,
-    List<String> weaknesses) {
-}
+    List<String> weaknesses) {}
