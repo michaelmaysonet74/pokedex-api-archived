@@ -1,0 +1,119 @@
+type Ability {
+    name: String
+    effect: String
+    isHidden: Boolean
+}
+
+"""Represents the base stats of a Pokemon."""
+type BaseStats {
+    """Pokemon's base HP"""
+    hp: Int!
+
+    """Pokemon's base Attack"""
+    attack: Int!
+
+    """Pokemon's base Defense"""
+    defense: Int!
+
+    """Pokemon's base Special Attack"""
+    specialAttack: Int!
+
+    """Pokemon's base Special Defense"""
+    specialDefense: Int!
+
+    """Pokemon's base Speed"""
+    speed: Int!
+}
+
+"""Represents a Pokemon Evolution"""
+type Evolution {
+    """Pokemon's id, can match pokedex number (not always)."""
+    id: ID
+
+    """Pokemon's name"""
+    name: String
+}
+
+"""Represents a Pokemon Evolution chain."""
+type EvolutionChain {
+    """Represents a Pokemon which it evolves from in the chain."""
+    from: Evolution
+
+    """Represents a Pokemon which it evolves to in the chain."""
+    to: [Evolution]
+}
+
+"""Represents the measurement of a given entity."""
+type Measurement {
+    """Entity's height"""
+    height: String
+
+    """Entity's weight"""
+    weight: String
+}
+
+"""All available Pokemon types."""
+enum PokemonType {
+    Bug
+    Dark
+    Dragon
+    Electric
+    Fairy
+    Fighting
+    Fire
+    Flying
+    Ghost
+    Grass
+    Ground
+    Ice
+    Normal
+    Poison
+    Psychic
+    Rock
+    Steel
+    Water
+}
+
+"""Represents the details of a Pokemon."""
+type Pokemon {
+    """Pokemon's id, can match pokedex number (not always)."""
+    id: ID!
+
+    """Pokemon's name"""
+    name: String!
+
+    """List of abilities this Pokemon can have."""
+    abilities: [Ability]
+
+    """Pokemon's base stats"""
+    baseStats: BaseStats
+
+    """Pokemon's category"""
+    category: String
+
+    """Pokedex flavor text entries for this Pokemon."""
+    entry: String
+
+    """Pokemon's evolution chain"""
+    evolution: EvolutionChain
+
+    """Pokemon's measurement"""
+    measurement: Measurement
+
+    """URL of Pokemon's sprite"""
+    sprite: String
+
+    """Types that this Pokemon has, should not be more than two."""
+    types: [PokemonType]
+
+    """List of types that this Pokemon is weak against."""
+    weaknesses: [PokemonType]
+}
+
+type Query {
+    """Returns the details of a pokemon by the provided id."""
+    pokemonById(id: ID!): Pokemon
+
+    """Returns the details of a pokemon by the provided name."""
+    pokemonByName(name: String!): Pokemon
+}
