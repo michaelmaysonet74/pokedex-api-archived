@@ -25,7 +25,7 @@ API that allows users to fetch a pokemon information by their name or id.
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/poke-dex-api.git
+    git clone https://github.com/michaelmaysonet74/poke-dex-api.git
     ```
 2. Navigate to the project directory:
     ```sh
