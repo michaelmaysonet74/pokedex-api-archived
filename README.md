@@ -62,7 +62,7 @@ The application will start on http://localhost:8080.
 
 - Fetch Pokemon by ID:
 
-  `curl -X GET "http://localhost:8080/api/v1pokemon/25"`
+  `curl -X GET "http://localhost:8080/api/v1/pokemon/25"`
 
 - Fetch Pokemon by Name:
 
