@@ -49,13 +49,13 @@ The application will start on http://localhost:8080.
 ## API Endpoints
 
 - Get Pokemon by ID
-    - URL: /api/v1/pokemon/{id}
-    - Method: GET
+    - URL: `/api/v1/pokemon/{id}`
+    - Method: `GET`
     - Description: Fetches information about a Pokemon by its ID.
 
 - Get Pokemon by Name
-    - URL: /api/v1/pokemon?name={name}
-    - Method: GET
+    - URL: `/api/v1/pokemon?name={name}`
+    - Method: `GET`
     - Description: Fetches information about a Pokemon by its name.
 
 ### Example Requests
@@ -74,8 +74,8 @@ This project also includes support for GraphQL.
 
 ### GraphQL Endpoint
 
-- URL: /graphql
-- Method: POST
+- URL: `/graphql`
+- Method: `POST`
 - Description: Endpoint to handle GraphQL queries.
 
 ### Example GraphQL Queries
