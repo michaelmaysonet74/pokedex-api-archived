@@ -83,7 +83,7 @@ This project also includes support for GraphQL.
 - Query Pokemon by ID:
 
 ```gql
-query{
+query {
   pokemonById(id: 25) {
     id
     name
