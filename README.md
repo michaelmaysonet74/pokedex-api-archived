@@ -46,26 +46,26 @@ The application will start on http://localhost:8080.
 
 ## API Endpoints
 
-- Get Pokemon by Name  
-  - URL: /pokemon/name/{name}
-  - Method: GET
-  - Description: Fetches information about a Pokemon by its name.
-
-- Get Pokemon by ID  
-  - URL: /pokemon/id/{id}
+- Get Pokemon by ID
+  - URL: /api/v1/pokemon/{id}
   - Method: GET
   - Description: Fetches information about a Pokemon by its ID.
 
+- Get Pokemon by Name  
+  - URL: /api/v1/pokemon?name={name}
+  - Method: GET
+  - Description: Fetches information about a Pokemon by its name.
+
 ### Example Requests
+
+- Fetch Pokemon by ID:
+
+  `curl -X GET "http://localhost:8080/api/v1pokemon/25"`
 
 - Fetch Pokemon by Name:
 
-    `curl -X GET "http://localhost:8080/pokemon/name/pikachu"`
+  `curl -X GET "http://localhost:8080/api/v1/pokemon?name=Pikachu"`
 
-
-- Fetch Pokemon by ID:
-   
-  `curl -X GET "http://localhost:8080/pokemon/id/25"`
 
 ## GraphQL Support
 This project also includes support for GraphQL, allowing for more flexible and efficient queries.
@@ -78,9 +78,9 @@ This project also includes support for GraphQL, allowing for more flexible and e
 
 ### Example GraphQL Queries
 
-- Fetch Pokemon by ID:
+- Query Pokemon by ID:
 ```gql
-{
+query{
   pokemonById(id: 25) {
     id
     name
@@ -91,10 +91,10 @@ This project also includes support for GraphQL, allowing for more flexible and e
 }
 ```
 
-- Fetch Pokemon by Name:  
+- Query Pokemon by Name:  
 ```gql 
-{
-  pokemonByName(name: "pikachu") {
+query {
+  pokemonByName(name: "Pikachu") {
     id
     name
     type
