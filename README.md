@@ -39,22 +39,24 @@ API that allows users to fetch a pokemon information by their name or id.
 ### Running the Application
 
 To run the application, use the following command:
+
 ```sh
 ./gradlew bootRun
 ```
+
 The application will start on http://localhost:8080.
 
 ## API Endpoints
 
 - Get Pokemon by ID
-  - URL: /api/v1/pokemon/{id}
-  - Method: GET
-  - Description: Fetches information about a Pokemon by its ID.
+    - URL: /api/v1/pokemon/{id}
+    - Method: GET
+    - Description: Fetches information about a Pokemon by its ID.
 
-- Get Pokemon by Name  
-  - URL: /api/v1/pokemon?name={name}
-  - Method: GET
-  - Description: Fetches information about a Pokemon by its name.
+- Get Pokemon by Name
+    - URL: /api/v1/pokemon?name={name}
+    - Method: GET
+    - Description: Fetches information about a Pokemon by its name.
 
 ### Example Requests
 
@@ -66,9 +68,9 @@ The application will start on http://localhost:8080.
 
   `curl -X GET "http://localhost:8080/api/v1/pokemon?name=Pikachu"`
 
-
 ## GraphQL Support
-This project also includes support for GraphQL, allowing for more flexible and efficient queries.
+
+This project also includes support for GraphQL.
 
 ### GraphQL Endpoint
 
@@ -79,6 +81,7 @@ This project also includes support for GraphQL, allowing for more flexible and e
 ### Example GraphQL Queries
 
 - Query Pokemon by ID:
+
 ```gql
 query{
   pokemonById(id: 25) {
@@ -91,7 +94,8 @@ query{
 }
 ```
 
-- Query Pokemon by Name:  
+- Query Pokemon by Name:
+
 ```gql 
 query {
   pokemonByName(name: "Pikachu") {
