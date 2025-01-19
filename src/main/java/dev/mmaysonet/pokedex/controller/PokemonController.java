@@ -17,7 +17,7 @@ public class PokemonController {
   private final PokemonMapper pokemonMapper;
 
   @GetMapping("/{id}")
-  public Mono<ResponseEntity<PokemonResponse>> getPokemonById(@PathVariable Integer id) {
+  public Mono<ResponseEntity<PokemonResponse>> getPokemonById(@PathVariable int id) {
     return pokemonService
         .getPokemonById(id)
         .map(

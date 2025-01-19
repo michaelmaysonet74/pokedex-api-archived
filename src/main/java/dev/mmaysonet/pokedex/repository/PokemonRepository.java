@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 @Repository
 public interface PokemonRepository extends ReactiveMongoRepository<PokemonEntity, String> {
 
-  Mono<PokemonEntity> findPokemonById(@NonNull Integer id);
+  Mono<PokemonEntity> findPokemonById(int id);
 
   Mono<PokemonEntity> findPokemonByName(@NonNull String name);
 }
