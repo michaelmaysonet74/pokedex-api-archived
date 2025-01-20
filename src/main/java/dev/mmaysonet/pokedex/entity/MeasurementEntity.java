@@ -1,3 +1,5 @@
 package dev.mmaysonet.pokedex.entity;
 
-public record MeasurementEntity(String height, String weight) {}
+import lombok.NonNull;
+
+public record MeasurementEntity(@NonNull String height, @NonNull String weight) {}

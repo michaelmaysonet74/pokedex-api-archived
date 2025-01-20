@@ -1,7 +1,7 @@
 type Ability {
-    name: String
-    effect: String
-    isHidden: Boolean
+    name: String!
+    effect: String!
+    isHidden: Boolean!
 }
 
 """Represents the base stats of a Pokemon."""
@@ -28,10 +28,10 @@ type BaseStats {
 """Represents a Pokemon Evolution"""
 type Evolution {
     """Pokemon's id, can match pokedex number (not always)."""
-    id: ID
+    id: ID!
 
     """Pokemon's name"""
-    name: String
+    name: String!
 }
 
 """Represents a Pokemon Evolution chain."""
@@ -46,10 +46,10 @@ type EvolutionChain {
 """Represents the measurement of a given entity."""
 type Measurement {
     """Entity's height"""
-    height: String
+    height: String!
 
     """Entity's weight"""
-    weight: String
+    weight: String!
 }
 
 """All available Pokemon types."""
@@ -74,6 +74,14 @@ enum PokemonType {
     Water
 }
 
+"""Represents a Pokemon's typing."""
+type PokemonTypes {
+    "Pokemon's primary type"
+    primary: PokemonType!
+    "Pokemon's secondary type. This type might be null because some Pokemon are mono type."
+    secondary: PokemonType
+}
+
 """Represents the details of a Pokemon."""
 type Pokemon {
     """Pokemon's id, can match pokedex number (not always)."""
@@ -83,31 +91,31 @@ type Pokemon {
     name: String!
 
     """List of abilities this Pokemon can have."""
-    abilities: [Ability]
+    abilities: [Ability!]!
 
     """Pokemon's base stats"""
-    baseStats: BaseStats
+    baseStats: BaseStats!
 
     """Pokemon's category"""
-    category: String
+    category: String!
 
     """Pokedex flavor text entries for this Pokemon."""
-    entry: String
+    entry: String!
 
     """Pokemon's evolution chain"""
-    evolution: EvolutionChain
+    evolution: EvolutionChain!
 
     """Pokemon's measurement"""
-    measurement: Measurement
+    measurement: Measurement!
 
     """URL of Pokemon's sprite"""
-    sprite: String
+    sprite: String!
 
     """Types that this Pokemon has, should not be more than two."""
-    types: [PokemonType]
+    types: PokemonTypes!
 
     """List of types that this Pokemon is weak against."""
-    weaknesses: [PokemonType]
+    weaknesses: [PokemonType!]!
 }
 
 type Query {

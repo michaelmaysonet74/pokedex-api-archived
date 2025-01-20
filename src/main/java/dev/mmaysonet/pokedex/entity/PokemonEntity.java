@@ -8,15 +8,15 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "pokemon")
 public record PokemonEntity(
     @Id String _id,
-    @NonNull Integer id,
+    int id,
     @NonNull String name,
-    List<AbilityEntity> abilities,
-    BaseStatsEntity baseStats,
-    String category,
-    String entry,
-    EvolutionChainEntity evolution,
-    Integer generation,
-    MeasurementEntity measurement,
-    String sprite,
-    List<String> types,
-    List<String> weaknesses) {}
+    @NonNull List<AbilityEntity> abilities,
+    @NonNull BaseStatsEntity baseStats,
+    @NonNull String category,
+    @NonNull String entry,
+    @NonNull EvolutionChainEntity evolution,
+    int generation,
+    @NonNull MeasurementEntity measurement,
+    @NonNull String sprite,
+    @NonNull List<String> types,
+    @NonNull List<String> weaknesses) {}

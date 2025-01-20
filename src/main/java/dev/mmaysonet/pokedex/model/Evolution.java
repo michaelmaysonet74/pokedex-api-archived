@@ -1,3 +1,7 @@
 package dev.mmaysonet.pokedex.model;
 
-public record Evolution(String id, String name) {}
+import lombok.Builder;
+import lombok.NonNull;
+
+@Builder(toBuilder = true)
+public record Evolution(@NonNull String id, @NonNull String name) {}

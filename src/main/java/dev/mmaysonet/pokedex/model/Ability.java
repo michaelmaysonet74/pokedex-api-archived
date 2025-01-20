@@ -1,6 +1,7 @@
 package dev.mmaysonet.pokedex.model;
 
 import lombok.Builder;
+import lombok.NonNull;
 
 @Builder(toBuilder = true)
-public record Ability(String name, String effect, boolean isHidden) {}
+public record Ability(@NonNull String name, @NonNull String effect, boolean isHidden) {}
