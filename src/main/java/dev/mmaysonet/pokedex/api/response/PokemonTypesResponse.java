@@ -4,4 +4,4 @@ import lombok.Builder;
 import lombok.NonNull;
 
 @Builder(toBuilder = true)
-public record MeasurementResponse(@NonNull String height, @NonNull String weight) {}
+public record PokemonTypesResponse(@NonNull String primary, String secondary) {}

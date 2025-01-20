@@ -4,9 +4,4 @@ import lombok.Builder;
 
 @Builder(toBuilder = true)
 public record BaseStatsResponse(
-    Integer hp,
-    Integer attack,
-    Integer defense,
-    Integer specialAttack,
-    Integer specialDefense,
-    Integer speed) {}
+    int hp, int attack, int defense, int specialAttack, int specialDefense, int speed) {}

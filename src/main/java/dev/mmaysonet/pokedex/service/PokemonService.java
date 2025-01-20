@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 
 public interface PokemonService {
 
-  Mono<Optional<Pokemon>> getPokemonById(@NonNull Integer id);
+  Mono<Optional<Pokemon>> getPokemonById(int id);
 
   Mono<Optional<Pokemon>> getPokemonByName(@NonNull String name);
 }

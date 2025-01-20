@@ -17,7 +17,7 @@ public class PokemonServiceImpl implements PokemonService {
   private final PokemonMapper pokemonMapper;
 
   @Override
-  public Mono<Optional<Pokemon>> getPokemonById(@NonNull Integer id) {
+  public Mono<Optional<Pokemon>> getPokemonById(int id) {
     return pokemonRepository
         .findPokemonById(id)
         .map(entity -> Optional.ofNullable(entity).map(pokemonMapper::toPokemon))

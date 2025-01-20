@@ -6,15 +6,15 @@ import lombok.NonNull;
 
 @Builder(toBuilder = true)
 public record PokemonResponse(
-    @NonNull Integer id,
+    int id,
     @NonNull String name,
-    List<AbilityResponse> abilities,
-    BaseStatsResponse baseStats,
-    String category,
-    String entry,
-    EvolutionChainResponse evolution,
-    Integer generation,
-    MeasurementResponse measurement,
-    String sprite,
-    List<String> types,
-    List<String> weaknesses) {}
+    @NonNull List<AbilityResponse> abilities,
+    @NonNull BaseStatsResponse baseStats,
+    @NonNull String category,
+    @NonNull String entry,
+    @NonNull EvolutionChainResponse evolution,
+    int generation,
+    @NonNull MeasurementResponse measurement,
+    @NonNull String sprite,
+    @NonNull PokemonTypesResponse types,
+    @NonNull List<String> weaknesses) {}

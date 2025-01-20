@@ -1,3 +1,5 @@
 package dev.mmaysonet.pokedex.entity;
 
-public record AbilityEntity(String name, String effect, boolean isHidden) {}
+import lombok.NonNull;
+
+public record AbilityEntity(@NonNull String name, @NonNull String effect, boolean isHidden) {}
