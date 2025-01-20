@@ -105,6 +105,9 @@ type Pokemon {
     """Pokemon's evolution chain"""
     evolution: EvolutionChain!
 
+    """Pokemon's generation"""
+    generation: Int!
+
     """Pokemon's measurement"""
     measurement: Measurement!
 
