@@ -6,7 +6,7 @@ import lombok.NonNull;
 
 @Builder(toBuilder = true)
 public record PokemonResponse(
-    @NonNull Integer id,
+    int id,
     @NonNull String name,
     @NonNull List<AbilityResponse> abilities,
     @NonNull BaseStatsResponse baseStats,
