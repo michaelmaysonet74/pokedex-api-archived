@@ -7,6 +7,7 @@ API that allows users to fetch a pokemon information by their name or id.
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
+    - [Environment Variables](#environment-variables)
     - [Running the Application](#running-the-application)
 - [API Endpoints](#api-endpoints)
 - [Example Requests](#example-requests)
@@ -35,6 +36,10 @@ API that allows users to fetch a pokemon information by their name or id.
     ```sh
     ./gradlew build
     ```
+
+### Environment Variables
+
+- `MONGO_DB_URI`: MongoDB connection string (e.g., `mongodb://localhost:27017/pokedex`)
 
 ### Running the Application
 
