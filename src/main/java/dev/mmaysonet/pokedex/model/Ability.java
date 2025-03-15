@@ -4,4 +4,4 @@ import lombok.Builder;
 import lombok.NonNull;
 
 @Builder(toBuilder = true)
-public record Ability(@NonNull String name, @NonNull String effect, boolean isHidden) {}
+public record Ability(@NonNull String name, String effect, boolean isHidden) {}
