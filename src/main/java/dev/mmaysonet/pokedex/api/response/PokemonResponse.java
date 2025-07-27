@@ -17,4 +17,6 @@ public record PokemonResponse(
     @NonNull MeasurementResponse measurement,
     @NonNull String sprite,
     @NonNull PokemonTypesResponse types,
+    @NonNull List<String> immunities,
+    @NonNull List<String> resistances,
     @NonNull List<String> weaknesses) {}
