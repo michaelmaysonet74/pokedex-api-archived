@@ -18,4 +18,6 @@ public record Pokemon(
     @NonNull Measurement measurement,
     @NonNull String sprite,
     @NonNull List<PokemonType> types,
+    @NonNull List<PokemonType> immunities,
+    @NonNull List<PokemonType> resistances,
     @NonNull List<PokemonType> weaknesses) {}

@@ -19,4 +19,6 @@ public record PokemonEntity(
     @NonNull MeasurementEntity measurement,
     @NonNull String sprite,
     @NonNull List<String> types,
+    @NonNull List<String> immunities,
+    @NonNull List<String> resistances,
     @NonNull List<String> weaknesses) {}
