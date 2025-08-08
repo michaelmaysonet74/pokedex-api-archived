@@ -1,3 +1,5 @@
+# _NOTE: This repository has been rewritten in Elixir, see the new implementation [here]()_
+
 # pokedex-api
 
 API that allows users to fetch a pokemon information by their name or id.
