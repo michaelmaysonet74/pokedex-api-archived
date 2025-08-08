@@ -1,4 +1,4 @@
-# _NOTE:_ This repository has been rewritten in Elixir, see the new implementation [here]()
+# _NOTE:_ This project has been rewritten in Elixir; see the new implementation [here]().
 
 # pokedex-api
 
